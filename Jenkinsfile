@@ -14,7 +14,7 @@ pipeline{
 		skipDefaultCheckout()
 		
 		// discard build & log rotator configuration
-		buildDiscarded(logRotator(daysToKeepStr: '5', numToKeepStr: '2'))
+		buildDiscarder(logRotator(daysToKeepStr: '5', numToKeepStr: '2'))
 		
 		// avoid concurrent builds
 		disableConcurrentBuilds()
